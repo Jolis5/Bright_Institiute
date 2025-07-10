@@ -1,0 +1,327 @@
+/* إعداد عام للصفحة */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  background-image: url('images/photo3.jpg');   /* الخلفية */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  position: relative;
+}
+
+/* طبقة شفافة فوق الخلفية */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(165, 203, 239, 0.6); /* أزرق شفاف */
+  z-index: -1;
+}
+
+/* تنسيق شريط التنقل */
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* قسم الترحيب */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  min-height: 70vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.info-box {
+  background-color: rgba(255, 255, 255, 0.8); /* أبيض بشفافية */
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* صفحة من نحن */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 22px;
+  color: #333;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* نموذج التسجيل وتسجيل الدخول */
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 60%;
+  padding: 12px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: #2d4c28;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* صفحة الدورات */
+.courses {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.courses h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2d4c28;
+  margin-bottom: 30px;
+}
+
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* كل بطاقة دورة */
+.course-card {
+  position: relative;
+  background-color: #2c3e50;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+/* اسم الدورة والأيقونة فوق الصورة */
+.course-info {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.course-info i {
+  color: #ffd700;
+  font-size: 20px;
+}
+
+/* تذييل الصفحة */
+.footer {
+  background-color: rgba(255, 255, 255, 0.3); /* خلفية شفافة */
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #2c3e50;
+}
+
+.footer-box p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.footer-box i {
+  color: #2c3e50;
+  margin-left: 8px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #2c3e50;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+/* تعديل حاوية تسجيل الدخول */
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+/* تغليف الصورة والنموذج بجانب بعض */
+.login-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  flex: 0 0 50px; /* يحدد عرض الحاوية */
+}
+
+/* حجم الصورة */
+.image-container img {
+  width: 50px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* تنسيق نموذج الدخول */
+.form-container {
+  flex: 1; /* يأخذ باقي المساحة */
+  min-width: 250px;
+}
+
+/* عناوين */
+.form-container h2 {
+  margin-bottom: 25px;
+  color: #2d4c28;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: right;
+}
+
+/* مجموعة الإدخال مع الأيقونة */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #2d4c28;
+  font-size: 18px;
+}
+
+/* تعديل الحقول لتكون ملائمة */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 40px 12px 12px; /* حجز مساحة للأيقونة على اليمين */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* زر الدخول */
+button {
+  padding: 12px 30px;
+  background-color: #2d4c28;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+button i {
+  font-size: 20px;
+}

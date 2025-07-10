@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>استبيان</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+    <a href="index.html">الرئيسية</a> 
+    <a href="about.html">عن المعهد</a> 
+    <a href="courses.html">الدورات</a> 
+    <a href="contact.html">تواصل معنا</a> 
+    <a href="login.html">تسجيل كطالب</a>
+    <a href="signup.html">إنشاء حساب</a>
+
+</nav>
+
+<div class="container">
+  <h2>الاستبيان</h2>
+  <form action="submit_survey.php" method="post">
+    <label>كيف تقيم دورتنا؟</label><br>
+    <select name="rating" required>
+      <option value="">اختر التقييم</option>
+      <option value="ممتاز">ممتاز</option>
+      <option value="جيد جداً">جيد جداً</option>
+      <option value="جيد">جيد</option>
+      <option value="متوسط">متوسط</option>
+      <option value="ضعيف">ضعيف</option>
+    </select><br><br>
+
+    <label>ما هو رأيك في المحاضر؟</label><br>
+    <textarea name="instructor_opinion" rows="4" cols="50" placeholder="اكتب رأيك هنا..."></textarea><br><br>
+
+    <button type="submit">إرسال</button>
+  </form>
+</div>
+
+</body>
+</html>
